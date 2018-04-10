@@ -11,7 +11,7 @@ exports.invoke = async (event, context, callback) => {
   const requestBody = JSON.parse(event.body);
   // const requestBody = event.body;
   const invokeURL = requestBody.invokeURL;
-  const requestPayLoad = requestBody.payLoad;
+  let requestPayLoad = requestBody.payLoad;
   const async = requestBody.async !== false;
   const responsePayLoad = {};
 

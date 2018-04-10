@@ -7,7 +7,8 @@ const table = "InvocationDetails";
 
     export const updateResponsePayLoad = async (Id, responsePayload, error) => {
 
-        const status = error ? "error" : "success";
+        let status = error ? "error" : "success";
+        if(responsePayload.includes("FaultCode")|| responsePayload.includes("ValidationError"))  status = "error";
         var params = {
             TableName: table,
             Key: {

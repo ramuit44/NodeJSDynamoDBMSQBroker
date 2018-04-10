@@ -12,7 +12,10 @@ const headers =
 const baseURL = 'https://nst35-gws.dss.gov.au/childcare/ccms';
 
 const createRequest = (method, invokeURL, payLoad) => {
-    let stringpayLoad = payLoad.replace(/\:/g, ': ');
+   //let stringpayLoad = payLoad.replace(/\:/g, ': ');
+   // stringpayLoad = stringpayLoad.replace(/\\"/g, "'");
+   let stringpayLoad = payLoad;
+    
     console.log("Processed createRequest " + stringpayLoad);
 
     var request = {
