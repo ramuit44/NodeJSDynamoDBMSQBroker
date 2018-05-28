@@ -1,4 +1,4 @@
-# CCITS Integration Project #
+# NodeJS Dynamo DB MSQ Broker #
 
 CCITS Integration layer following a Decoupled Invocation pattern with AWS Lambda and serverless
 
