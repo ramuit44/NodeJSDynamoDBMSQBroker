@@ -1,0 +1,142 @@
+{
+	"info": {
+		"name": "CCITS-BAMBOO-GATEWAY",
+		"_postman_id": "780bb3d8-eea3-2493-93a1-9c3011c91409",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DiagnosticPing-Synch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"invokeURL\":\"/diagnostic/json/ping\",\n\t\"payLoad\":\"{\\\"PingRequest\\\":\\\"1234\\\",\\\"SourceSystemCode\\\":\\\"BAMBv1.8KJ34\\\",\\\"ApprovalId\\\": \\\"4-3RIL7U6\\\"}\",\n\t\"async\": true\n}"
+				},
+				"url": {
+					"raw": "https://qm0ftz2c59.execute-api.ap-southeast-2.amazonaws.com/dev/ccitsAdapter",
+					"protocol": "https",
+					"host": [
+						"qm0ftz2c59",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"ccitsAdapter"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CreateEnrolment-Synch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"invokeURL\":\"/enrolment/json/createenrolment\",\n\t\"payLoad\":\"{\\r\\n   \\\"TransactionId\\\": \\\"CreateEnrolment-Kartel-1\\\",\\r\\n   \\\"SourceSystemCode\\\":\\\"BAMBv1.8KJ34\\\",\\r\\n   \\\"NewEnrolment\\\": {\\r\\n      \\\"AuthorisedPersonFirstName\\\": \\\"4-3RIL7U6\\\",\\r\\n      \\\"AuthorisedPersonLastName\\\": \\\"4-ENROLID\\\",\\r\\n      \\\"AuthorisedPersonId\\\": \\\"34-ATTENDID\\\",\\r\\n      \\\"ServiceProviderEnrolmentReference\\\": \\\"SR99357\\\",\\r\\n      \\\"Type\\\": \\\"Informal\\\",\\r\\n      \\\"ChildDateOfBirth\\\": \\\"2017-05-16\\\",\\r\\n      \\\"ChildServiceClientId\\\":\\\"14\\\",\\r\\n      \\\"ParentGuardianDateOfBirth\\\":\\\"1984-05-16\\\",\\r\\n      \\\"ParentGuardianServiceClientId\\\":32,\\r\\n      \\\"StartDate\\\":\\\"2018-03-16\\\",\\r\\n      \\\"EndDate\\\":\\\"2018-07-16\\\",\\r\\n      \\\"CCBApprovalId\\\":\\\"4-3RIL7U6\\\",\\r\\n      \\\"ServiceType\\\":\\\"LDC\\\",\\r\\n      \\\"JFAEligibilityDetailsRequest\\\":\\\"N\\\"\\r\\n   }\\r\\n}\",\n\t\"async\": false\n}"
+				},
+				"url": {
+					"raw": "https://qm0ftz2c59.execute-api.ap-southeast-2.amazonaws.com/dev/ccitsAdapter",
+					"protocol": "https",
+					"host": [
+						"qm0ftz2c59",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"ccitsAdapter"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CreateEnrolment-Synch TEST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"invokeURL\":\"/enrolment/json/createenrolment\",\n\t\"payLoad\":\"{\\r\\n   \\\"TransactionId\\\": \\\"CreateEnrolment-Kartel-1\\\",\\r\\n   \\\"SourceSystemCode\\\":\\\"BAMBv1.8KJ34\\\",\\r\\n   \\\"NewEnrolment\\\": {\\\"AuthorisedPersonFirstName\\\":\\\"c\\\",\\\"AuthorisedPersonLastName\\\":\\\"c\\\",\\\"AuthorisedPersonId\\\":\\\"1\\\",\\\"ServiceProviderEnrolmentReference\\\":\\\"2\\\",\\\"Type\\\":\\\"Informal\\\",\\\"ChildCRN\\\":null,\\\"ChildDateOfBirth\\\":\\\"2014-05-16\\\",\\\"ChildServiceClientId\\\":\\\"2\\\",\\\"ParentGuardianCRN\\\":null,\\\"ParentGuardianDateOfBirth\\\":\\\"1984-05-16\\\",\\\"ParentGuardianServiceClientId\\\":\\\"2\\\",\\\"StartDate\\\":\\\"2018-03-16\\\",\\\"EndDateSpecified\\\":false,\\\"CCBApprovalId\\\":\\\"4-3RIL7U6\\\",\\\"ServiceType\\\":\\\"LDC\\\",\\\"RequestEnrolmentAdvance\\\":null,\\\"ChildIndigenousStatus\\\":\\\"Aboriginal and TS Islander\\\",\\\"ChildDisability\\\":\\\"N\\\",\\\"ChildDisabilityEffectiveDateSpecified\\\":false,\\\"ChildSpecialNeeds\\\":\\\"N\\\",\\\"ChildSpecialNeedsEffectiveDateSpecified\\\":false,\\\"JFAEligibilityDetailsRequest\\\":\\\"N\\\"}\\r\\n}\",\n\t\"async\": false\n}"
+				},
+				"url": {
+					"raw": "https://qm0ftz2c59.execute-api.ap-southeast-2.amazonaws.com/dev/ccitsAdapter",
+					"protocol": "https",
+					"host": [
+						"qm0ftz2c59",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"ccitsAdapter"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DiagnosticPing-Async",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"invokeURL\":\"/diagnostic/json/ping\",\n\t\"payLoad\":\"{\\\"PingRequest\\\":\\\"1234\\\",\\\"SourceSystemCode\\\":\\\"BAMBv1.8KJ34\\\",\\\"ApprovalId\\\": \\\"4-3RIL7U6\\\"}\"\n\t\n}"
+				},
+				"url": {
+					"raw": "https://2gbhelwy83.execute-api.ap-southeast-2.amazonaws.com/dev/ccitsAdapter",
+					"protocol": "https",
+					"host": [
+						"2gbhelwy83",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"ccitsAdapter"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
