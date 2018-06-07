@@ -91,6 +91,15 @@ functions:
               - InvocationDetails
               - StreamArn
           batchSize: 1
+  ccitsResponseFetcg:
+    handler: src/api/ccitsResponseFetch.get
+    events:
+      - http:
+          path: ccitsResponse/{id}
+          method: get
+          cors: true
+
+          
       
 resources:
         Resources: 

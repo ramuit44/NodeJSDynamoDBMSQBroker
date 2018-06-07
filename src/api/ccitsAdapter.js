@@ -8,8 +8,8 @@ AWS.config.setPromisesDependency(require('bluebird'));
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 exports.invoke = async (event, context, callback) => {
-  //const requestBody = JSON.parse(event.body);
-  const requestBody = event.body;
+  const requestBody = JSON.parse(event.body);
+  //const requestBody = event.body;
   const invokeURL = requestBody.invokeURL;
   let requestPayLoad = requestBody.payLoad;
   const async = requestBody.async !== false;

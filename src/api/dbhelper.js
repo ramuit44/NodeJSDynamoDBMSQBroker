@@ -4,6 +4,7 @@ var dynamoDb = new AWS.DynamoDB.DocumentClient()
 AWS.config.setPromisesDependency(require('bluebird'));
 const table = "InvocationDetails";
 
+    
 
     export const updateResponsePayLoad = async (Id, responsePayload, error) => {
 
